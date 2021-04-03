@@ -1,0 +1,7 @@
+.todoinput{
+    width: unset;
+}
+.todoform{
+    display: flex;
+  align-items: flex-start;
+}

@@ -1,0 +1,16 @@
+@import '~antd/dist/antd.css';
+
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to right, pink 50%, rgb(144, 144, 175) 0%);
+  height:100vh;}
+
+  .todotxt{
+    text-align: start;
+     }
