@@ -14,3 +14,14 @@ body {
   .todotxt{
     text-align: start;
      }
+     .todolist{
+       list-style: none;
+       display: inline;
+     }
+     .todo{
+      margin-left: 550px;
+     }
+     .completed{
+       text-decoration: line-through;
+       opacity: 0.5;
+     }

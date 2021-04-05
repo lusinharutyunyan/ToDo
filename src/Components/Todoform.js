@@ -6,15 +6,23 @@ import { Button } from 'antd';
 
 
 
-function Todoform(props) {
-  const [input, setInput] = useState("")
+function Todoform({setInputText, todos, setTodos, inputText}) {
+ const inputTextHandler = (e) => {
+   console.log(e.target.value);
+   setInputText(e.target.value); 
+ };
+ const submitTodoHandler = (e) => {
+   e.preventDefault();
+   setTodos([
+     ...todos,{text:inputText, completed:false,id:Math.random()*100}
+   ]);
+   setInputText("");
 
-  
-
+ };
   return (
-    <form className="todoform"  onSubmit ={this.addItem}>
-      <Input placeholder="Add a todo" value={input} className="todoinput" name="text" />
-      <Button type="primary">Add </Button>
+    <form className="todoform" >
+      <Input onChange={inputTextHandler} placeholder="Add a todo"  className="todoinput" name="text"value={inputText} />
+      <Button onClick = {submitTodoHandler} type="primary">Add </Button>
 
     </form>
   )
